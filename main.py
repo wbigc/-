@@ -41,7 +41,7 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 wea, temperature, highest, lowest = get_weather()
-data = {"words":{"value":words,"color":get_random_color()},"city":{"value":"当前城市"+city,"color":get_random_color()},"rightNow":{"value":'早安,今天是'+get_now()+',要记得吃早餐',"color":get_random_color()},"weather":{"value":'天气'+wea,"color":get_random_color()},"temperature":{"value":temperature,"color":get_random_color()},"highest": {"value":'最高气温'+highest+'℃',"color":get_random_color()},"lowest":{"value":'最低气温'+lowest+'℃', "color":get_random_color()}}
+data = {"words":{"value":words,"color":get_random_color()},"city":{"value":"当前城市"+city,"color":get_random_color()},"rightNow":{"value":'早安,今天是'+get_now()+',要记得吃早餐',"color":get_random_color()},"weather":{"value":'天气'+wea,"color":get_random_color()},"temperature":{"value":temperature,"color":get_random_color()},"highest": {"value":'最高气温'+str(highest)+'℃',"color":get_random_color()},"lowest":{"value":'最低气温'+str(lowest)+'℃', "color":get_random_color()}}
 count = 0
 for user_id in user_ids:
   res = wm.send_template(user_id, template_id, data)
