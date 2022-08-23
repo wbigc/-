@@ -28,7 +28,7 @@ def get_weather():
 
 def  get_now():
    
-   return datetime.strftime(today,"%Y")+'年',int(str((datetime.strftime(today,"%m"))))+'月',int(str((datetime.strftime(today,"%d"))))+'日',
+   return datetime.strftime(today,"%Y")+'年'+str(int(str(datetime.strftime(today,"%m"))))+'月'+str(int(str(datetime.strftime(today,"%d"))))+'日',
 
 def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
