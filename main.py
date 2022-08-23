@@ -1,4 +1,5 @@
 from datetime import date, datetime
+import time
 import math
 from wechatpy import WeChatClient
 from wechatpy.client.api import WeChatMessage, WeChatTemplate
@@ -28,8 +29,8 @@ def get_count():
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
   return delta.days
 def  get_now():
-   now=datetime.datetime.now()
-   return now.strftime("%Y-%m-%d %H:%M:%S")+'号'
+   
+   return time.strftime("%Y-%m-%d")+'号'
 
 def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
