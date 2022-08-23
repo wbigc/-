@@ -30,7 +30,7 @@ def get_count():
   return delta.days
 def  get_now():
    
-   return datetime.strftime(today,"%Y-%m-%d")+'号'
+   return datetime.strftime(today,"%Y-%m-%d")
 
 def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
